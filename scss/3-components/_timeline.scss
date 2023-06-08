@@ -1,0 +1,80 @@
+.timeline {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 9px;
+        margin-left: -1px;
+        width: 3px;
+        height: 100%;
+        background: $grey;
+        z-index: 1
+    }
+
+    &-block {
+        width: -webkit-calc(80% + 8px);
+        width: -moz-calc(80% + 8px);
+        width: calc(80% + 8px);
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: flex;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+        -moz-box-pack: justify;
+        justify-content: space-between;
+        clear: both;
+    }
+
+    .marker {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 2px solid $very-light-grey;
+        background: $black;
+        margin-top: 10px;
+        z-index: 9999
+    }
+
+    &-content {
+        width: 95%;
+        padding: 0 15px;
+
+        h3 {
+            margin: 10px 0;
+            font-weight: $weight-normal;
+            font-size: 20px;
+            color: $black;
+        }
+
+        span {
+            font-size: 14px;
+            color: #a4a4a4;
+            line-height: 1.6em;
+        }
+
+        p {
+            margin-top: 10px;
+            font-size: 16px;
+            line-height: 1.5em;
+            word-spacing: 1px;
+            color: $grey;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container:before {
+        left: 8px;
+        width: 2px;
+    }
+
+    .timeline-block {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
