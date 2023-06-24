@@ -1,0 +1,12 @@
+/* Place all input components styling here */
+input,
+select,
+textarea {
+    border: 1px solid #ccc;
+    font-size: $base-font-size;
+    padding: 20px;
+
+    &:focus {
+        border: 1px solid rgb(199, 199, 199);
+    }
+}
