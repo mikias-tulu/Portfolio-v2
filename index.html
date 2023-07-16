@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.0/css/all.css">
+    <!-- Animation AOS scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- My scripts -->
+    <script type="module" src="js/imports.js" defer></script>
+    <link rel="stylesheet" href="/scss/main.css">
+    <link rel="icon" type="image/jpg" href="../images/self.jpg" />
+    <!-- Hamburger menu -->
+    <link href="/scss/libraries/hamburgers-master/dist/hamburgers.css" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GRE6WN1W8Y"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-GRE6WN1W8Y');
+    </script>
+    <title>Mikias Tulu  | Developer portfolio</title>
+</head>
+
+<!-- Redirect site to index.html -->
+<script>
+    if (!window.location.href.includes("index.html")) {
+        window.location.replace("index.html");
+    }
+</script>
+
+
+
+<script>
+    // When the user scrolls the page, execute myFunction
+    window.onscroll = function () { myFunction() };
+
+    function myFunction() {
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+        document.getElementById("myBar").style.width = scrolled + "%";
+    }
+
+    function clickTab(evt, name, horizontal) {
+        let i, tabcontent, tablinks;
+
+        /** RESET STYLING **/
+        if (horizontal) {
+            tabcontent = document.getElementsByClassName("tabcontent");
+            tablinks = document.getElementsByClassName("tablinks");
+
+            for (i = 0; i < tablinks.length; i++) {
+                tabcontent[i].style.display = "none";
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+
+                // Set display to block if the name passed is the same as the id of the element
+                if (tabcontent[i].id == name + "-content" || tabcontent[i].id == name) {
+                    tabcontent[i].style.display = "block";
+                }
+            }
+
+            evt.currentTarget.className += " active";
+        } else {
+            tabcontent = document.getElementsByClassName("tabcontent-vertical");
+            tablinks = document.getElementsByClassName("tablinks-vertical");
+
+            for (i = 0; i < tablinks.length; i++) {
+                tabcontent[i].style.display = "none";
+                tablinks[i].className = tablinks[i].className.replace(" active-vertical", "");
+
+                // Set display to block if the name passed is the same as the id of the element
+                if (tabcontent[i].id == name + "-content" || tabcontent[i].id == name) {
+                    tabcontent[i].style.display = "block";
+                }
+            }
+
+            evt.currentTarget.className += " active-vertical";
+        }
+    }
+</script>
+
+</html>
