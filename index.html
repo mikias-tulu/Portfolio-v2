@@ -36,7 +36,158 @@
     }
 </script>
 
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NR3DFJH" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
+    <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+    </div>
+
+    <div id="content"></div>
+
+    <section id="landing-section">
+        <header-component></header-component>
+        <div class="container">
+            <div class="row">
+                <div class="col" id="col-left" data-aos="zoom-out-right">
+                    <h1 class="landing-title">Hey, I'm <span>Miki</span> 👋</h1>
+                    <p class="landing-description">
+                        Passionate full stack developer skilled in creating innovative, </br>
+                        user-friendly web applications. Proficient in front-end and back-end 
+                        technologies, delivering exceptional digital experiences. 
+                        <br>Let's bring your ideas to life.</br>
+                    </p>
+                    <div>
+                        <a href="#about" class="cta-btn-fill" style="margin: 0 10px 10px 0;">Learn more</a>
+                        <a href="#contact" class="cta-btn">Get in contact</a>
+                    </div>
+                </div>
+                <div class="col" data-aos="zoom-out-left"><img src="/images/illustration-landing.png"
+                        alt="illustration-landing" id="illustration-landing"></div>
+            </div>
+        </div>
+    </section>
+
+    <button class="scrollToTopBtn">☝️</button>
+
+    <section id="about">
+        <div class="self-shape-lg"></div>
+        <div class="self-shape-sm"></div>
+        <div class="container">
+            <div class="row" data-aos="zoom-in-up">
+                <div class="col-4 text-center about-img-container">
+                    <img loading="lazy" src="/images/self.jpg" alt="mikias-tulu" id="self-img">
+                </div>
+                <div class="col-8">
+                    <h2 class="title-section">About me</h2>
+                    <p>Hello! I'm Mikias Tulu, a developer based in Addis Ababa, Ethiopia.
+
+                        I enjoy creating applications that help make people's life easier. My goal is to always build
+                        products that are performant, secure and give people a good experience regardless of their
+                        device.</p>
+
+                    <div class="tab">
+                        <button class="tablinks active" onclick="clickTab(event, 'skills', true)"><i class="fas fa-cogs"
+                                style="margin-right: 5px;"></i> Skills</button>
+                        <button class="tablinks" onclick="clickTab(event, 'education', true)"><i
+                                class="fas fa-university" style="margin-right: 5px;"></i> Education</button>
+                        <button class="tablinks" onclick="clickTab(event, 'hobbies', true)"><i class="fas fa-futbol"
+                                style="margin-right: 5px;"></i> Hobbies</button>
+                    </div>
+
+                    <div id="skills" class="tabcontent skills-tab" style="display: block;">
+                        <p>Front-end</p>
+                        <ul class="horizontal-list skills-li" id="skills-li-frontend"></ul>
+                        <p>Back-end</p>
+                        <ul class="horizontal-list skills-li" id="skills-li-backend"></ul>
+                        <p>Other</p>
+                        <ul class="horizontal-list skills-li" id="skills-li-other"></ul>
+                    </div>
+
+                    <div id="education" class="tabcontent">
+                        <div class="timeline" id="timeline">
+                        </div>
+                    </div>
+
+                    <div id="hobbies" class="tabcontent">
+                        <ul class="vertical-list" style="font-size: 20px; line-height: 1.7em;">
+                            <li>⚽ - watching football</li>
+                            <li>🍿 - watching movies & series</li>
+                            <li>🏃‍♂️ - running</li>
+                            <li>🧑‍💻 - coding</li>
+                            <li>🧑‍🤝‍🧑 - friends</li>
+                        </ul>
+                    </div>
+                    <div id="content-about">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container" data-aos="zoom-in-up">
+            <h2 class="title-section">Featured projects</h2>
+            <div id="projects-container"></div><br><br><br>
+        </div>
+    </section>
+
+    <section id="experience">
+        <div class="container">
+            <h2 class="title-section" data-aos="fade-right" data-aos-duration="1000">Experience</h2>
+            <div class="row">
+                <div class="col-4">
+                    <ul class="vertical-list vertical-tabs" id="tabs-experience" data-aos="fade-right">
+                        <li class="tablinks-vertical active-vertical" onclick="clickTab(event, 'DallolTech', false)"
+                            id="DallolTech">Dallol Tech
+                        </li>
+                        <li class="tablinks-vertical" onclick="clickTab(event, 'codeerschool', false)"
+                            id="codeerschool">Het
+                            Codeerbedrijf
+                        </li>
+                        <li class="tablinks-vertical" onclick="clickTab(event, 'tsb', false)" id="tsb">The
+                            Freelance Platform</li>
+                        <li class="tablinks-vertical" onclick="clickTab(event, 'codingclub', false)" id="codingclub">
+                            Sandford Coding Club
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-8" id="content-experience" data-aos="fade-right" data-aos-duration="1400"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <div class="row" data-aos="zoom-in-up">
+                <div class="col">
+                    <img loading="lazy" src="/images/contact-illustration.svg" id="contact-illustration"
+                        alt="contact-illustration">
+                </div>
+                <div class="col">
+                    <h2 class="title-section">Contact me</h2><br>
+                    <p>Although I'm not currently looking for any new opportunities, my inbox is always open. Whether
+                        you have a question or just want to say hi, I'll try my best to get back to you!</p><br>
+                    <a href="mailto:mikiDOTtuluATgmailDOTcom" onclick="this.href=this.href
+                    .replace(/AT/,'@')
+                    .replace(/DOT/,'.')" class="cta-btn-uppercase">Mail me</a>
+                    <ul class="horizontal-list socials-links">
+                        <li><a href="https://www.linkedin.com/in/" rel="noreferrer"
+                                target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                        <li><a href="https://github.com/mikias-tulu" rel="noreferrer" target="_blank"><i
+                                    class="fab fa-github"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer-component></footer-component>
+</body>
 
 <script>
     // When the user scrolls the page, execute myFunction
