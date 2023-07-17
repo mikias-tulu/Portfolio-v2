@@ -1,0 +1,22 @@
+.breadcrum {
+    text-align: center;
+    color: white;
+
+    .wrapper {
+        padding: 120px 0;
+        background-color: rgba(0, 0, 0, 0.685);
+    }
+
+    &-title {
+        font-size: 60px;
+        letter-spacing: 2px;
+        font-weight: 700;
+        margin: 0;
+    }
+}
+
+#projects-breadcrum {
+    background: url('https://images.hdqwalls.com/download/city-blurred-hd-2560x1440.jpg');
+    background-size: cover;
+    background-position: 90%;
+}
