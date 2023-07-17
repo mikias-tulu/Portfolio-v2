@@ -1,0 +1,39 @@
+.horizontal-list {
+    @include horizontal-list;
+}
+
+.vertical-list {
+    @include vertical-list;
+}
+
+/** Vertical list of experience tab **/
+#tabs-experience {
+    @include mobile {
+        overflow-x: scroll;
+
+        li {
+            display: table-cell;
+        }
+    }
+}
+
+.socials-links {
+    margin-top: 40px;
+    font-size: 40px;
+
+    li {
+        margin: 0 10px;
+    }
+
+    a {
+        color: $black !important;
+    }
+}
+
+.skills-li {
+    font-size: 30px;
+
+    li {
+        margin: 10px 15px 10px 0;
+    }
+}

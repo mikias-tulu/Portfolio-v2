@@ -1,0 +1,73 @@
+/* Place all button components styling here */
+.cta-btn,
+.cta-btn-fill,
+.cta-btn-uppercase {
+    color: $black !important;
+    background: transparent;
+    background-color: transparent;
+    font-weight: $weight-bold;
+    font-size: #{$base-font-size - 2px};
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 18px;
+    border: 2px solid $black;
+    transition: 0.3s ease-in !important;
+    display: inline-block;
+    position: relative;
+
+    &:hover {
+        box-shadow: $box-shadow-purple-hover;
+        background-color: $black;
+        color: white !important;
+        cursor: pointer;
+    }
+}
+
+.cta-btn-fill {
+    background-color: $black;
+    color: white !important;
+}
+
+.cta-btn-uppercase {
+    text-transform: uppercase;
+    padding: 12px 55px;
+    letter-spacing: 1px;
+}
+
+.scrollToTopBtn {
+    background-color: $black;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    font-size: 22px;
+    line-height: 48px;
+    width: 48px;
+
+    /* place it at the bottom right corner */
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    /* keep it at the top of everything else */
+    z-index: 100;
+    /* hide with opacity */
+    opacity: 0;
+    /* also add a translate effect */
+    transform: translateY(100px);
+    /* and a transition */
+    transition: all .5s ease
+}
+
+.showBtn {
+    opacity: 1;
+    transform: translateY(0)
+}
+
+.sm-icon {
+    font-size: 14px;
+    color: $black;
+    float: right;
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px;
+}

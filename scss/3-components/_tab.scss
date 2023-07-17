@@ -1,0 +1,178 @@
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    transition: .5s smooth !important;
+
+    button {
+        background-color: transparent;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 40px 14px 0;
+        transition: 0.3s;
+        font-size: 18px;
+        font-weight: $weight-bold;
+
+        @include mobile {
+            font-size: 14px;
+            padding: 14px 20px 14px 0;
+        }
+
+        &:hover {
+            color: $purple;
+        }
+    }
+}
+
+.active {
+    color: $light-purple;
+    background-color: transparent;
+    transition: .5s;
+
+    &:after {
+        content: "";
+        display: block;
+        border-bottom: 4px solid $light-purple;
+        width: 20px;
+        position: relative;
+        bottom: -5px;
+    }
+}
+
+.active-vertical {
+    color: $light-purple !important;
+    border-left: 5px solid $purple !important;
+    transition: .5s smooth !important;
+}
+
+/* Style the tab content */
+.tabcontent,
+.tabcontent-vertical {
+    display: none;
+    padding: 6px 0;
+    border-top: none;
+    opacity: 0;
+    -webkit-transform: translateY(30%);
+    transform: translateY(30%);
+    -webkit-animation: fadeIn 0.9s forwards;
+    animation: fadeIn 0.9s forwards;
+
+    .job-title {
+        font-size: 26px;
+        font-weight: 600;
+        color: $dark-purple;
+
+        @include mobile {
+            margin-top: 40px;
+        }
+    }
+
+    .job-date {
+        margin-top: 10px;
+        color: $grey;
+        font-size: 17px;
+    }
+
+    .job-activities {
+        margin-bottom: 40px;
+
+        li {
+            margin: 10px 0 20px 0;
+            position: relative;
+            padding-left: 40px;
+            font-size: 40px;
+
+            &:before {
+                content: "▹";
+                color: $purple;
+                position: absolute;
+                left: 0;
+                top: 7px;
+                font-weight: bold;
+                filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2));
+            }
+
+            span {
+                font-size: 18px;
+                color: $black;
+            }
+        }
+    }
+
+    .job-tech {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+}
+
+.skills-tab {
+    li {
+        font-size: 40px;
+    }
+
+    p {
+        margin: 10px 0 0 0;
+        font-size: 14px;
+        color: black;
+        font-weight: 600;
+    }
+
+    .icon-skill-img {
+        height: 35px;
+        width: 35px;
+    }
+}
+
+.vertical-tabs {
+    margin-top: 40px;
+    padding: 0;
+
+    li {
+        padding: 30px 0 30px 30px;
+        margin: 0;
+        width: 100%;
+        border-left: 5px solid #ccc;
+        color: $grey;
+        font-weight: 500;
+        font-size: 18px;
+        margin-left: 20px;
+
+        @include mobile {
+            padding: 10px;
+            border-left: none !important;
+            margin: 0 20px 0 0;
+            padding: 30px;
+        }
+
+        &:hover {
+            border-left: 5px solid darken(#ccc, 20%);
+            color: darken(#ccc, 40%);
+        }
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    to {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+#content-experience {
+    .tabcontent {
+        @include mobile {
+            margin-top: 40px;
+        }
+    }
+}
