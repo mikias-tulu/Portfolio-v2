@@ -1,0 +1,121 @@
+/* Mixins */
+@mixin mobile {
+    @media (max-width: 900px) {
+        @content;
+    }
+}
+
+@mixin mobile-sm {
+    @media (max-width: 600px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: $desktop-width) {
+        @content;
+    }
+}
+
+@mixin container($width) {
+    margin: 0 auto;
+    width: $width;
+}
+
+@mixin hoverEffect($color, $percentage, $darken: true, $background: true) {
+    transition: $transition-ease;
+
+    &:hover {
+        cursor: pointer;
+
+        @if $background {
+            @if $darken {
+                background-color: darken($color, $percentage);
+            }
+
+            @else {
+                background-color: lighten($color, $percentage);
+            }
+        }
+
+        @else {
+            @if $darken {
+                color: darken($color, $percentage);
+            }
+
+            @else {
+                color: lighten($color, $percentage);
+            }
+        }
+    }
+}
+
+@mixin reset-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+@mixin horizontal-list {
+    @include reset-list;
+
+    li {
+
+        a {
+            color: $dark-purple;
+            font-weight: $weight-bold;
+            @include hoverEffect($light-purple, 10%, true, false);
+        }
+
+        display: inline-block;
+        margin: 0 15px;
+
+        @include mobile {
+            margin: 0 10px !important;
+        }
+    }
+}
+
+@mixin vertical-list {
+    @include reset-list;
+
+    li {
+        margin: 10px 0;
+
+        @include hoverEffect($light-purple, 10%, true, false);
+
+        @include mobile {
+            margin: 0 10px;
+        }
+    }
+}
+
+@mixin backgroundImageCover($img-url) {
+    background-image: url($img-url);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 60%;
+}
+
+.container {
+    @include container(82%);
+    position: relative;
+
+    @include mobile {
+        @include container(95%);
+    }
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 12% 50%;
+    }
+
+    50% {
+        background-position: 100% 75%;
+    }
+
+    100% {
+        background-position: 12% 50%;
+    }
+}
