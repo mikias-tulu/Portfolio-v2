@@ -1,0 +1,36 @@
+// Font-family
+$font-poppins: 'Poppins',
+sans-serif;
+$font-roboto: 'Roboto',
+sans-serif;
+
+// Margins
+$margin-typography: 20px;
+
+// Font-weights
+$weight-light: 500;
+$weight-normal: 600;
+$weight-bold: 700;
+
+// Font-sizes
+$base-font-size: 18px;
+
+// Colors
+$purple: #760ADF;
+$light-purple: #ab5ef6;
+$dark-purple: #3B0570;
+$grey: #848486;
+$very-light-grey: #FCFCFC;
+$black: #35323E;
+
+$box-shadow-purple: 0 7px 10px 7px #3a05700e;
+$box-shadow-purple-hover: 0 3px 10px 7px #3a057007;
+$box-shadow-light: 0 0 10px 5px #aa5ef610;
+$txt-shadow: 2px 0 5px #3a057048;
+
+// Transitions
+$transition-ease: 200ms ease;
+
+// Screen widths
+$mobile-width: 375px;
+$desktop-width: 1440px;
