@@ -12,7 +12,7 @@ export default class Footer extends HTMLElement {
                 target="_blank"><i class="fab fa-linkedin"></i></a></li>
                 <li><a href="https://github.com/mikias-tulu" rel="noreferrer" target="_blank"><i
                     class="fab fa-github"></i></a></li>
-                <li><a href="mailto:miki.tulu@gmail.com" class="fas fa-envelope"></a></li>
+                <li><a href="mailto:miki.tulu@gmail.com"><i class="fas fa-envelope"></i> </a></li>
             </ul>
             <ul class="horizontal-list menu-footer">
                 <li><a href="#landing-section">Home</a></li>
