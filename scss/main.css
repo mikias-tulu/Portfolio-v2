@@ -4,6 +4,9 @@
 /* Font Imports */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+
+
 /* Mixins */
 .container {
   margin: 0 auto;
@@ -1422,3 +1425,117 @@ section {
   position: relative;
 }
 /*# sourceMappingURL=main.css.map */
+
+
+
+
+
+
+
+
+/* Toogle Mode*/
+
+/* Light Mode Styles */
+body.light-mode {
+  /* Add your light mode styles here */
+  background-color: white;
+  color: #35323E;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  /* Add your dark mode styles here */
+  background-color: #35323E;
+  color: white;
+}
+
+body.dark-mode a {
+  /* Change link color in dark mode */
+  color: #ab5ef6;
+}
+
+body.dark-mode a:hover {
+  /* Change link color on hover in dark mode */
+  color: #760adf;
+}
+
+/* Dark mode styles for the footer component */
+body.dark-mode footer {
+  /* Add your dark mode styles here */
+  background-color: #35323E;
+  color: white;
+}
+
+body.dark-mode footer a {
+  /* Change link color in dark mode */
+  color: #ffffff;
+}
+
+body.dark-mode footer a:hover {
+  /* Change link color on hover in dark mode */
+  color: #760adf;
+}
+
+body.dark-mode footer li {
+  /* Change list item color in dark mode */
+  color: white;
+}
+
+body.dark-mode footer li a i {
+  /* Change icon color in dark mode, including the email icon */
+  color: white;
+}
+
+/* Dark mode styles for the sub-footer */
+body.dark-mode .sub-footer {
+  background-color: #35323E;
+  color: white;
+}
+
+body.dark-mode .sub-footer p {
+  color: white;
+}
+
+
+/* Dark mode styles for the contact section */
+body.dark-mode #contact {
+  background-color: #35323E;
+  color: white;
+}
+
+body.dark-mode #contact h2.title-section {
+  color: white;
+}
+
+body.dark-mode #contact p {
+  color: white;
+}
+
+body.dark-mode #contact a.cta-btn-uppercase {
+  color: white;
+}
+
+body.dark-mode #contact a.cta-btn-uppercase:hover {
+  color: #760adf;
+}
+
+body.dark-mode #contact .socials-links li a {
+  color: white;
+}
+
+
+body.dark-mode #contact .socials-links li a:hover {
+  color: #760adf;
+}
+
+body.dark-mode #contact a.cta-btn-uppercase {
+  color: white;
+}
+
+body.dark-mode #contact li a i .fa-linkedin{
+  /* Change icon color in dark mode, including the email icon */
+  color: white;
+}
+
+
+
