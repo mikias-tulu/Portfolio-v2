@@ -8,6 +8,7 @@ export default class Header extends HTMLElement {
         <header>
           <nav class="container desktop-menu">
             <ul class="horizontal-list">
+                <li><a href="#" class="mode-toggle" onclick="toggleMode()">Toggle Mode</a></li>
                 <li data-aos="fade-down" data-aos-duration="400"><a href="#landing-section">Home</a></li>
                 <li data-aos="fade-down" data-aos-duration="600"><a href="#about">About</a></li>
                 <li data-aos="fade-down" data-aos-duration="800"><a href="#projects">Projects</a></li>
@@ -25,6 +26,9 @@ export default class Header extends HTMLElement {
         </header>
         
         <ul class="mobile-menu expandable" id="mobile-menu-li">
+        <div class="bottom">
+        <li><a href="#" class="mode-toggle" onclick="toggleMode()">Toggle Mode</a></li>
+        </div>
           <li><a href="#landing-section">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#projects">Projects</a></li>
