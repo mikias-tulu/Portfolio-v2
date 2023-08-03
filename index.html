@@ -45,6 +45,7 @@
     <div class="progress-container">
         <div class="progress-bar" id="myBar"></div>
     </div>
+        
 
     <div id="content"></div>
 
@@ -63,6 +64,8 @@
                     <div>
                         <a href="#about" class="cta-btn-fill" style="margin: 0 10px 10px 0;">Learn more</a>
                         <a href="#contact" class="cta-btn">Get in contact</a>
+                        
+
                     </div>
                 </div>
                 <div class="col" data-aos="zoom-out-left"><img src="/images/illustration-landing.png"
@@ -188,6 +191,29 @@
 
     <footer-component></footer-component>
 </body>
+
+
+
+<script>
+  // Function to toggle between light and dark modes
+  function toggleMode() {
+    const body = document.body;
+    body.classList.toggle('dark-mode');
+    if (body.classList.contains('dark-mode')) {
+      localStorage.setItem('mode', 'dark');
+    } else {
+      localStorage.setItem('mode', 'light');
+    }
+  }
+
+  // Check for the saved mode preference on page load
+  const savedMode = localStorage.getItem('mode');
+  if (savedMode === 'dark') {
+    document.body.classList.add('dark-mode');
+  } else {
+    document.body.classList.add('light-mode');
+  }
+</script>
 
 <script>
     // When the user scrolls the page, execute myFunction
